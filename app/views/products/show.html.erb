@@ -1,4 +1,25 @@
-It's <%= @product.name %>
-<% if @product.picture.attached? %>
-    <p><%= cl_image_tag @product.picture.key, crop: :scale, width: 320, cloud_name: 'dkh1bbave' %></p>
-<% end %>
+<div class="product">
+    <div class="product_info">
+        <h1><%= @product.name %></h1>
+        <% if @product.picture.attached? %>
+            <p><%= cl_image_tag @product.picture.key, crop: :scale, width: 500, cloud_name: 'dkh1bbave' %></p>
+        <% end %>
+        <h2>$<%= @product.price %></h2>
+        <p><%= @product.description %></p>
+    </div>
+    <div class="right_panel">
+        <div class="seller_info">
+            <h2>Seller Info</h2>
+            <p><%= @product.user.name %></p>
+            <% if user_signed_in? %>
+                <p>Email: <%= @product.user.email %></p>
+                <p>Phone: <%= @product.user.phone %></p>
+            <% else %>
+                <a href="/users/sign_in"><div class="button"> Login to see contact details </div></a>
+            <% end %>
+        </div>
+        <% if user_signed_in? %>
+            <a href="#"><div class="button"> Save to wish list </div></a>
+        <% end %>
+    </div>
+</div>

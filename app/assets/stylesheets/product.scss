@@ -2,10 +2,34 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.newListing {
+.new_listing {
   max-width: 800px;
 
   input#product_picture {
     margin: 10px 0 25px 0;
+  }
+}
+
+.product {
+  display: flex;
+  .product_info {
+    flex-grow: 1;
+  }
+  .seller_info {
+    width: 250px;
+    background: #efefef;
+    border-radius: 10px;
+    padding: 20px 50px;
+  }
+  .button {
+    text-align: center;
+    background: #ff4081;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 50px;
+    color: white;
+    &:hover {
+      background: #f76b9a;
+    }
   }
 }
