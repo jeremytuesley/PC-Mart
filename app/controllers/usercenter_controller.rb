@@ -1,0 +1,2 @@
+class UsercenterController < ApplicationController
+end
