@@ -1,1 +1,4 @@
 It's <%= @product.name %>
+<% if @product.picture.attached? %>
+    <p><%= cl_image_tag @product.picture.key, crop: :scale, width: 320, cloud_name: 'dkh1bbave' %></p>
+<% end %>
