@@ -4,7 +4,7 @@
     <title>PCMart</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto&display=swap"
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -22,15 +22,26 @@
         <div class="logo">PC Mart</div>
         <div class="menu">
           <div>Create Listing</div>
-          <div>login/ signup</div>
+          <div>
+            <% if user_signed_in? %>
+              <%= link_to "My Account", usercenter_index_path() %>
+            <% else %>
+              <%= link_to "Login", new_user_session_path() %> |
+              <%= link_to "Register", new_user_registration_path() %> 
+            <% end %>
+          </div>
           <div>Wish List</div>
         </div>
       </div>
     </div>
 
     <div class="container">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+      <% if notice %>
+        <p class="notice"><%= notice %></p> 
+      <% end %>
+      <% if alert %>
+        <p class="alert"><%= alert %></p>
+      <% end %>
       <%= yield %>
     </div>
   </body>

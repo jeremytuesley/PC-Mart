@@ -17,6 +17,11 @@
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
+  color: #212121;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
@@ -25,6 +30,47 @@ body {
   margin: 0 auto;
 }
 
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="password"] {
+  width: 100%;
+  line-height: 35px;
+  margin: 5px 0 15px 0;
+  outline: 0;
+  border: none;
+  background: #eee;
+  border-radius: 5px;
+  padding-left: 10px;
+  color: #757575;
+  font-size: 18px;
+  font-weight: 300;
+}
+input[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  background: #3f51b5;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.alert,
+.notice {
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px 0 15px 0;
+  font-size: 13px;
+}
+.alert {
+  background: #ffdbdb;
+  color: #b95757;
+}
+.notice {
+  background: #d5ffd1;
+  color: #31986a;
+}
+
+/* Header */
 .header {
   background: #3f51b5;
   height: 50px;
@@ -39,15 +85,19 @@ body {
   color: white;
 }
 
-.logo {
+.header a {
+  color: white;
+}
+
+.header .logo {
   padding-left: 5px;
   font-size: 22px;
 }
 
-.menu {
+.header .menu {
   display: flex;
 }
-.menu div {
+.header .menu div {
   padding: 0 20px;
   font-size: 16px;
 }
