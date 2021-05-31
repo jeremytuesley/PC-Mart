@@ -2,6 +2,11 @@
 <html>
   <head>
     <title>PCMart</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,8 +16,22 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <%# Header %>
+    <div class="header">
+      <div class="container">
+        <div class="logo">PC Mart</div>
+        <div class="menu">
+          <div>Create Listing</div>
+          <div>login/ signup</div>
+          <div>Wish List</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </div>
   </body>
 </html>
