@@ -1,6 +1,6 @@
 .auth {
   width: 400px;
-  margin: 80px auto;
+  margin: 30px auto;
 
   .new_user {
     margin-bottom: 10px;
@@ -17,10 +17,6 @@
     &.secondary a {
       color: #757575;
     }
-  }
-
-  input[type="submit"] {
-    margin-top: 40px;
   }
 
   #error_explanation {

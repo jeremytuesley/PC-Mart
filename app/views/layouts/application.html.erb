@@ -21,7 +21,7 @@
       <div class="container">
         <div class="logo">PC Mart</div>
         <div class="menu">
-          <div>Create Listing</div>
+          <div><%= link_to "Create Listing", new_product_path() %></div>
           <div>
             <% if user_signed_in? %>
               <%= link_to "My Account", usercenter_index_path() %>
@@ -35,12 +35,19 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container main">
       <% if notice %>
         <p class="notice"><%= notice %></p> 
       <% end %>
       <% if alert %>
         <p class="alert"><%= alert %></p>
+      <% end %>
+      <% if flash[:errors] %>
+        <ul class="alert">
+          <% flash[:errors].each do |error| %>
+            <li><%= " #{error}," %></li>
+          <% end %>
+        </ul>
       <% end %>
       <%= yield %>
     </div>
