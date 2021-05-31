@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: 'market#index'
   resources :market, as: :category 
   resources :product
+  devise_for :users
 end
