@@ -1,0 +1,21 @@
+<div class="box">
+  <% @products.each do | product | %>
+    <div class="product_card">
+      <div>
+        <a href="<%= product_path(product.id) %>">
+          <% if product.default_image? %> 
+            <%= image_tag("example_products/#{product.default_image}.jpg", width: 200) %> 
+          <% elsif product.picture.attached? %> 
+            <%= cl_image_tag product.picture.key, crop: :scale, width: 200, cloud_name: 'dkh1bbave'%> 
+          <% end %>
+        </a>
+      </div>
+      <div>
+        <a href="<%= product_path(product.id) %>">
+          <p class="name"> <%= product.name %> </p>
+          <p class="price">$<%= product.price%></p>
+        </a>
+      </div>
+    </div>
+  <% end %>
+</div>

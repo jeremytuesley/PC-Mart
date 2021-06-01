@@ -1,2 +1,20 @@
+<div class="homepage">
+  <h2>Browse our categories</h2>
+  <div class="box first">
+    <% @categories.each do | category | %>
+    <div class="card">
+      <div>
+        <a href="<%= category_path(category.id) %>">
+          <%= image_tag("category/#{category.name}.jpg", width: 150) %>
+        </a>
+      </div>
+      <div>
+        <a href="<%= category_path(category.id) %>"> <%= category.name %> </a>
+      </div>
+    </div>
+    <% end %>
+  </div>
 
-HELLO
+  <h2>New Listings</h2>
+  <%= render 'products' %>
+</div>

@@ -1,3 +1,53 @@
 // Place all the styles related to the market controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.homepage {
+  .box {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    &.first {
+      border-bottom: 1px solid #bdbdbd;
+    }
+  }
+  .card {
+    margin: 20px 30px;
+    width: 150px;
+    div {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+      a {
+        font-size: 16px;
+        color: #212121;
+      }
+    }
+  }
+
+  .product_card {
+    margin: 20px 30px;
+    width: 200px;
+    div {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+      a {
+        font-size: 16px;
+        color: #212121;
+      }
+    }
+    .name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3; /* number of lines to show */
+      -webkit-box-orient: vertical;
+    }
+    .price {
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+}

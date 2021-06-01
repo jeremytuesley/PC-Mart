@@ -31,12 +31,12 @@ cat1 = Category.create(name: "Cases")
 cat2 = Category.create(name: "Cooling")
 cat3 = Category.create(name: "CPU Processors")
 cat4 = Category.create(name: "Fans and Accessories")
-cat5 = Category.create(name: "Graphics Cards / GPU")
-cat6 = Category.create(name: "Memory (RAM)")
+cat5 = Category.create(name: "Graphics Cards")
+cat6 = Category.create(name: "Memory")
 cat7 = Category.create(name: "Motherboards")
-cat8 = Category.create(name: "Power Supply / PSU")
+cat8 = Category.create(name: "Power Supply")
 cat9 = Category.create(name: "Sound Cards")
-cat10 = Category.create(name: "Water Cooling Fittings")
+cat10 = Category.create(name: "Water Cooling")
 
 user1.products.create(name: "EZDIY-FAB 5-Pack 120mm Dual Frame RGB PWM Fans for PC Case,Addressable RGB Case Fan with Fan Hubs,5V ARGB 3-pin Motherboard Sync,ASUS Aura Sync", description: "A best choice of two ways to control the RGB lighting system by Hub Controller or by ARGB SYNC Motherboard Software (Press Mode buttom for 3 seconds to SYNC)
 16.8 Million Colors LED Design-Colorful lightning design with unlimited color transformation.
@@ -73,7 +73,7 @@ user1.products.create(name: "ARCTIC P14 PWM PST Value Pack - 140 mm Case Fan wit
 200 TO 1700 RPM REGULATED VIA PWM PST: Thanks to 4-pin connector, the RPM can be regulated in a broad spectrum via PWM, noise is kept at minimum while maximum cooling performance is given when needed
 MORE EFFICIENT TECHNOLOGY: The motor is powered by a Neodym-Iron-Boron-Magnet ring of the newest generation, which allows the new P14 PWM PST to run much more efficiently than its predecessors
 EXTENDED LIFE SPAN: A 10 °C lower motor temperature roughly doubles the life span of a fan, the new ARCTIC motor has a four times longer service life through its low coil temperature
-TECHNICAL DATA: Fan speed: 200–1700 RPM, Airflow: 72.8 CFM/123.76 m³/h (@ 1700 RPM), Noise Level: 0.3 Sone (@ 1700 RPM), Pin: 4-pin", price: 84.99, category: cat4, default_image: "7")
+TECHNICAL DATA: Fan speed: 200–1700 RPM, Airflow: 72.8 CFM/123.76 m³/h (@ 1700 RPM), Noise Level: 0.3 Sone (@ 1700 RPM), Pin: 4-pin", price: 93.59, category: cat4, default_image: "7")
 
 
 user1.products.create(name: "upHere Long Life Computer Case Fan 120mm Cooling Case Fan for Computer Cases Cooling,5-Pack,RGB", description: "1.Super Quiet: Equipped with rubber pads and hydraulic bearing, which greatly reduce operating noise and improves efficiency.
@@ -87,7 +87,7 @@ user1.products.create(name: "Arctic BioniX P120 A-RGB (Bundle 3 pc) - 120 mm Pre
 EASY CHAIN VIA CONNECTOR BLOCK: Fan has input and output to pass on light and fan signals; connector block enables this without visible cables
 PRESSURE OPTIMISED: In the development of the BioniX P120 A-RGB particular emphasis was placed on a focused Air Flow and high static pressure 2.1 mm/H2O; this guarantees efficient cooling
 400 TO 2300 RPM: Wide speed range and PWM Technology allows synchronous fan speed control with all other fans for maximum cooling performance
-TECHNICAL DATA: Fan Speed: 400-2300 RPM, Airflow: 48 CFM/81.55 m³/h, Noise level: 0.45 Sone, Static Pressure: 2.1 mm/H2O, 2x A-RGB Fan 8-pin Connector", price: 89.99, category: cat4, default_image: "9")
+TECHNICAL DATA: Fan Speed: 400-2300 RPM, Airflow: 48 CFM/81.55 m³/h, Noise level: 0.45 Sone, Static Pressure: 2.1 mm/H2O, 2x A-RGB Fan 8-pin Connector", price: 92, category: cat4, default_image: "9")
 
 
 user1.products.create(name: "ARCTIC F14 SILENT-140 mm Standard Case Fan, Ultra Low Noise Cooler, Silent Cooler with Standard Case, Push- or Pull Configuration Possible", description: "GREATER EFFICIENCY - LESS NOISE AT HIGHER AIRFLOW: At low fan speed, the motor noise is key, a motor developed in Germany with a new alloy/lubricant combination reduced friction and noise
