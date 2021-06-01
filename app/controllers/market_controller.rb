@@ -8,4 +8,9 @@ class MarketController < ApplicationController
         @category = Category.find(params[:id])
         @products = @category.products
     end
+
+    def seller
+        @seller = User.find(params[:id])
+        @products = @seller.products
+    end
 end

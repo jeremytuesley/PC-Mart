@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :products
   resources :usercenter
   devise_for :users
+  get '/seller/:id', to: 'market#seller', as: 'seller'
 end

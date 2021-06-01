@@ -14,12 +14,14 @@
     <div class="right_panel">
         <div class="seller_info">
             <h2>Seller Info</h2>
-            <p><%= @product.user.name %></p>
+            <p><%= link_to @product.user.name, seller_path(@product.user.id) %></p>
             <% if user_signed_in? %>
                 <p>Email: <%= @product.user.email %></p>
                 <p>Phone: <%= @product.user.phone %></p>
             <% else %>
-                <a href="/users/sign_in"><div class="button"> Login to see contact details </div></a>
+                <a href="<%= new_user_session_path() %>">
+                    <div class="button"> Login to see contact details </div>
+                </a>
             <% end %>
         </div>
         <% if user_signed_in? %>
