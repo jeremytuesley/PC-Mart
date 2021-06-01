@@ -4,8 +4,10 @@
         <% if @product.picture.attached? %>
             <p><%= cl_image_tag @product.picture.key, crop: :scale, width: 500, cloud_name: 'dkh1bbave' %></p>
         <% end %>
-        <h2>$<%= @product.price %></h2>
-        <p><%= @product.description %></p>
+        <h2>Price: $<%= @product.price %></h2>
+        <h4>Category: <%= @product.category.name %></h4>
+        <h4>Product description: </h4>
+        <%= @product.description %>
     </div>
     <div class="right_panel">
         <div class="seller_info">

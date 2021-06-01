@@ -14,19 +14,26 @@
   display: flex;
   .product_info {
     flex-grow: 1;
+    margin-right: 50px;
+    h1 {
+      margin-top: 0;
+    }
   }
   .seller_info {
     width: 250px;
     background: #efefef;
     border-radius: 10px;
-    padding: 20px 50px;
+    padding: 30px 50px;
+    h2 {
+      margin-top: 0;
+    }
   }
   .button {
     text-align: center;
     background: #ff4081;
     padding: 10px 20px;
     border-radius: 5px;
-    margin-top: 50px;
+    margin: 40px 0 20px 0;
     color: white;
     &:hover {
       background: #f76b9a;
