@@ -7,7 +7,7 @@
             <p><%= cl_image_tag @product.picture.key, crop: :scale, width: 500, cloud_name: 'dkh1bbave' %></p>
         <% end %>
         <h2>Price: $<%= @product.price %></h2>
-        <h4>Category: <%= @product.category.name %></h4>
+        <h4>Category: <%= link_to @product.category.name, category_path(@product.category.id) %></h4>
         <h4>Product description: </h4>
         <p class="description"><%= @product.description %></p>
     </div>

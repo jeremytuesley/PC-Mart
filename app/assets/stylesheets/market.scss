@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.homepage {
+.market {
   .box {
     display: flex;
     flex-wrap: wrap;
@@ -22,8 +22,22 @@
       a {
         font-size: 16px;
         color: #212121;
+        &:hover {
+          color: #03a9f4;
+        }
       }
     }
+  }
+  .no_product {
+    img {
+      margin-top: 60px;
+      opacity: 0.6;
+    }
+    p {
+      font-size: 18px;
+      margin-top: 30px;
+    }
+    text-align: center;
   }
 
   .product_card {
@@ -36,13 +50,16 @@
       a {
         font-size: 16px;
         color: #212121;
+        &:hover {
+          color: #03a9f4;
+        }
       }
     }
     .name {
       overflow: hidden;
       text-overflow: ellipsis;
       display: -webkit-box;
-      -webkit-line-clamp: 3; /* number of lines to show */
+      -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
     }
     .price {
