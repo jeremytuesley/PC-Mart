@@ -1,13 +1,15 @@
 <div class="product">
     <div class="product_info">
         <h1><%= @product.name %></h1>
-        <% if @product.picture.attached? %>
+        <% if @product.default_image? %>
+            <p><%= image_tag("example_products/#{@product.default_image}.jpg", width: 500) %></p>
+        <% elsif @product.picture.attached? %>
             <p><%= cl_image_tag @product.picture.key, crop: :scale, width: 500, cloud_name: 'dkh1bbave' %></p>
         <% end %>
         <h2>Price: $<%= @product.price %></h2>
         <h4>Category: <%= @product.category.name %></h4>
         <h4>Product description: </h4>
-        <%= @product.description %>
+        <p class="description"><%= @product.description %></p>
     </div>
     <div class="right_panel">
         <div class="seller_info">
