@@ -4,7 +4,7 @@
         <% if @product.picture.attached? %>
             <p><%= cl_image_tag @product.picture.key, crop: :scale, width: 500, cloud_name: 'dkh1bbave' %></p>
         <% elsif @product.default_image? %>
-            <p><%= image_tag("example_products/#{@product.default_image}.jpg", width: 500) %></p>
+            <p><%= #image_tag("example_products/#{@product.default_image}.jpg", width: 500) %></p>
         <% end %>
         <h2>Price: $<%= @product.price %></h2>
         <h4>Category: <%= link_to @product.category.name, category_path(@product.category.id) %></h4>
