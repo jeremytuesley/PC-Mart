@@ -1,3 +1,58 @@
 // Place all the styles related to the usercenter controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.usercenter {
+  .edit_details {
+    display: inline-block;
+    margin-right: 30px;
+  }
+  .logout {
+    color: #ff4081;
+  }
+  h2 {
+    margin-top: 60px;
+  }
+  .header_row {
+    font-weight: bold;
+    border-bottom: 1px solid #909090;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  .product {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #bdbdbd;
+    padding: 10px 0;
+    align-items: center;
+
+    .image {
+      min-width: 180px;
+    }
+    .name {
+      flex-grow: 1;
+      width: 100%;
+      margin-right: 30px;
+      a {
+        color: #212121;
+        &:hover {
+          color: #2196f3;
+        }
+      }
+    }
+    .price {
+      min-width: 80px;
+      text-align: center;
+    }
+    .manage {
+      min-width: 150px;
+      text-align: center;
+      .edit {
+        color: #3f51b5;
+      }
+      .delete {
+        color: #ff4081;
+      }
+    }
+  }
+}
