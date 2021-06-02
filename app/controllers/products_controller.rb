@@ -4,7 +4,9 @@ class ProductsController < ApplicationController
   before_action :set_item, only: %i[show update edit destroy]
   before_action :find_categories, only: %i[new create edit update]
 
-  def show; end
+  def show
+    @already_in_wishlist =  current_user.wishlist_products.include? @product
+  end
 
   def new 
     @product = Product.new

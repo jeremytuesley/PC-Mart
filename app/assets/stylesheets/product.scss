@@ -31,6 +31,9 @@
   .button {
     width: 350px;
   }
+  .button.disabled {
+    width: 310px;
+  }
   .seller_info {
     width: 250px;
     background: #efefef;

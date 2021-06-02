@@ -53,7 +53,10 @@ a {
 .button.blue:hover {
   background: #6577dc;
 }
-
+.button.disabled {
+  background: #848484;
+  color: #dadada;
+}
 .field input[type="text"],
 .field input[type="email"],
 .field input[type="password"] {
