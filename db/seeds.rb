@@ -28,6 +28,14 @@ user2.name = 'Jeremy'
 user2.phone = "0424148282"
 user2.save!
 
+user3 = User.new
+user3.email = 'test3@example.com'
+user3.password = '123456'
+user3.password_confirmation = '123456'
+user3.name = 'Jeremy'
+user3.phone = "0424148282"
+user3.save!
+
 cat1 = Category.create(name: "Cases")
 cat2 = Category.create(name: "Cooling")
 cat3 = Category.create(name: "CPU Processors")
@@ -104,3 +112,8 @@ user1.wishlists.create(product: prod8)
 user2.wishlists.create(product: prod1)
 user2.wishlists.create(product: prod2)
 user2.wishlists.create(product: prod3)
+
+user3.wishlists.create(product: prod1)
+user3.wishlists.create(product: prod3)
+user3.wishlists.create(product: prod6)
+user3.wishlists.create(product: prod10)

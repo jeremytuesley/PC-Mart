@@ -3,12 +3,16 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .usercenter {
-  .edit_details {
-    display: inline-block;
-    margin-right: 30px;
-  }
-  .logout {
-    color: #ff4081;
+  .action {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    .edit_details {
+      margin: 0 30px 0 0;
+    }
+    .logout {
+      color: #ff4081;
+    }
   }
   h2 {
     margin-top: 60px;

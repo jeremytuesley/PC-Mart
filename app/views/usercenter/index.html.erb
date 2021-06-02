@@ -2,7 +2,10 @@
   <h1><%= current_user.name %></h1>
   <p>Email: <%= current_user.email %></p>
   <p>Phone: <%= current_user.phone %></p>
-  <%= button_to "Edit my details", edit_user_registration_path(), method: :get, class: "button blue edit_details" %>
+  <div class="action">
+    <%= button_to "Edit my details", edit_user_registration_path(), method: :get, class: "button blue edit_details" %>
+    <%= link_to "logout", destroy_user_session_path(), method: :delete, class: "logout" %>
+  </div>
   <h2>Your current Listings: </h2>
   <%= render 'listing' %>
 </div>
