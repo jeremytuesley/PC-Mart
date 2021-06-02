@@ -1,7 +1,7 @@
 class MarketController < ApplicationController
     def index
         @categories = Category.order(:name)
-        @products = Product.order(:created_at).limit(8)
+        @products = Product.order(created_at: :desc).limit(8)
     end
 
     def show

@@ -8,6 +8,6 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: [:name, :phone])
   end
 
-  @categories = Category.order(:name)
-  
+  $categories = Category.order(:name)
+
 end
