@@ -17,7 +17,7 @@
           <% if product.picture.attached? %> 
             <%= cl_image_tag product.picture.key, crop: :scale, width: 150, cloud_name: 'dkh1bbave'%>
           <% elsif product.default_image? %> 
-           <!-- <%= image_tag("example_products/#{product.default_image}.jpg", width: 150) %>   -->
+            <%= image_tag("#{product.default_image}.jpg", width: 150) %>
           <% end %>
         </div>
         <div class="name">
