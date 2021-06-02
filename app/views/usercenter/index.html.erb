@@ -4,42 +4,5 @@
   <p>Phone: <%= current_user.phone %></p>
   <%= button_to "Edit my details", edit_user_registration_path(), method: :get, class: "button blue edit_details" %>
   <h2>Your current Listings: </h2>
-  <% if !@products.any? %>
-    <div class="no_product">
-      <%= image_tag("sad.png", width: 250) %>
-      <p>You have no listings yet</p>
-    </div>
-  <% else %>
-    <div class="product_list">
-      <div class="product header_row">
-        <div class="image">Image</div>
-        <div class="name">Title</div>
-        <div class="price">Price</div>
-        <div class="manage">Manage</div>
-      </div>
-      <% @products.each do | product | %>
-        <div class="product">
-          <div class="image">
-            <% if product.picture.attached? %> 
-              <%= cl_image_tag product.picture.key, crop: :scale, width: 150, cloud_name: 'dkh1bbave'%>
-            <% elsif product.default_image? %> 
-              <%= image_tag("example_products/#{product.default_image}.jpg", width: 150) %>  
-            <% end %>
-          </div>
-          <div class="name">
-            <a href="<%= product_path(product.id) %>">
-              <%= product.name %>
-            </a>
-          </div>
-          <div class="price">
-            $<%= product.price%>
-          </div>
-          <div class="manage">
-            <%= link_to "edit", edit_product_path(product), class: "edit" %> | 
-            <%= link_to 'delete', product_path(product), method: :delete, data: { confirm: "are you sure?"}, class: "delete" %><br />
-          </div>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
+  <%= render 'listing' %>
 </div>

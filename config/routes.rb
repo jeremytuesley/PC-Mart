@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :usercenter
   devise_for :users
   get '/seller/:id', to: 'market#seller', as: 'seller'
+  get '/wishlist', to: 'usercenter#wishlist', as: 'wishlist'
 end
