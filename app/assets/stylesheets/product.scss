@@ -28,6 +28,9 @@
       color: #03a9f4;
     }
   }
+  .button {
+    width: 310px;
+  }
   .seller_info {
     width: 250px;
     background: #efefef;
@@ -38,6 +41,9 @@
     }
     a {
       color: #03a9f4;
+    }
+    .button {
+      width: fit-content;
     }
   }
 }

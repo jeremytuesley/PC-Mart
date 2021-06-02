@@ -20,12 +20,12 @@
                 <p>Phone: <%= @product.user.phone %></p>
             <% else %>
                 <a href="<%= new_user_session_path() %>">
-                    <div class="button"> Login to see contact details </div>
+                    <div class="button red"> Login to see contact details </div>
                 </a>
             <% end %>
         </div>
         <% if user_signed_in? %>
-            <a href="#"><div class="button"> Save to wish list </div></a>
+            <a href="#"><div class="button red"> Save to wish list </div></a>
         <% end %>
     </div>
 </div>
