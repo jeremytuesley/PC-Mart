@@ -21,7 +21,7 @@
       <div class="container">
         <div class="logo"><%= link_to "PC Mart", root_path() %></div>
         <div class="menu">
-          <div><%= link_to "Create Listing", new_product_path() %></div>
+          <div><%= link_to "Create Listing", new_product_path(), class: "create" %></div>
           <div>
             <% if user_signed_in? %>
               <%= link_to "My Account", usercenter_path() %>
@@ -30,7 +30,7 @@
               <%= link_to "Register", new_user_registration_path() %> 
             <% end %>
           </div>
-          <div><%= link_to "Wish List", wishlist_path() %></div>
+          <div><%= link_to "Wish List", wishlist_path(), class: "wishlist" %></div>
         </div>
       </div>
     </div>

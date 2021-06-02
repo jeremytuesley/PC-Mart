@@ -4,7 +4,7 @@
     <p>Email: <%= @seller.email %></p>
     <p>Phone: <%= @seller.phone %></p>
   <% else %>
-    <%= button_to "Login to see contact details", method: :get, new_user_session_path(), class: "button red" %>
+    <%= button_to "Login to see contact details", new_user_session_path(), method: :get , class: "button red" %>
   <% end %>
 
   <h2>Current Listings by <%= @seller.name %></h2>

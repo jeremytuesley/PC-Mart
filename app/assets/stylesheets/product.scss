@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .new_listing {
+  width: 90%;
   max-width: 800px;
 
   input#product_picture {
@@ -12,9 +13,13 @@
 
 .product {
   display: flex;
+  @media only screen and (max-width: 1100px) {
+    display: block;
+  }
   .product_info {
     flex-grow: 1;
     margin-right: 50px;
+    margin-bottom: 100px;
     h1 {
       margin-top: 0;
     }
@@ -27,12 +32,26 @@
     a {
       color: #03a9f4;
     }
+    @media only screen and (max-width: 600px) {
+      margin-right: 0;
+      img {
+        width: 70%;
+      }
+      p:not(.description) {
+        text-align: center;
+      }
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    form {
+      text-align: center;
+    }
   }
   .button {
     width: 350px;
-  }
-  .button.disabled {
-    width: 310px;
+    &.disabled {
+      width: 310px;
+    }
   }
   .seller_info {
     width: 250px;
@@ -47,6 +66,9 @@
     }
     .button {
       width: fit-content;
+    }
+    @media only screen and (max-width: 600px) {
+      margin: 0 auto;
     }
   }
 }

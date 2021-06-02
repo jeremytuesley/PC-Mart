@@ -17,7 +17,7 @@ user1.email = 'test@example.com'
 user1.password = '123456'
 user1.password_confirmation = '123456'
 user1.name = 'Yan Yan'
-user1.phone = "0424148282"
+user1.phone = "0424140000"
 user1.save!
 
 user2 = User.new
@@ -25,7 +25,7 @@ user2.email = 'test2@example.com'
 user2.password = '123456'
 user2.password_confirmation = '123456'
 user2.name = 'Jeremy'
-user2.phone = "0424148282"
+user2.phone = "0424140001"
 user2.save!
 
 user3 = User.new
@@ -33,7 +33,7 @@ user3.email = 'test3@example.com'
 user3.password = '123456'
 user3.password_confirmation = '123456'
 user3.name = 'Jeremy'
-user3.phone = "0424148282"
+user3.phone = "0424140002"
 user3.save!
 
 cat1 = Category.create(name: "Cases")
