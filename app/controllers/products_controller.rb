@@ -5,7 +5,11 @@ class ProductsController < ApplicationController
   before_action :find_categories, only: %i[new create edit update]
 
   def show
-    @already_in_wishlist =  current_user.wishlist_products.include? @product
+    if user_signed_in?
+      @already_in_wishlist = current_user.wishlist_products.include? @product
+    else
+      @already_in_wishlist = false
+    end
   end
 
   def new 
