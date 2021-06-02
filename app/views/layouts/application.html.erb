@@ -51,5 +51,31 @@
       <% end %>
       <%= yield %>
     </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="logo"><%= link_to "PC Mart", root_path() %></div>
+        <div class="menu">
+          <div class="title">Account</div>
+          <%= link_to "Login", new_user_session_path() %>
+          <%= link_to "Register", new_user_registration_path() %> 
+          <%= link_to "My Account", usercenter_path() %>
+          <%= link_to "Edit my details", edit_user_registration_path() %>
+          <%= link_to "Logout", destroy_user_session_path(), method: :delete %>
+        </div>
+        <div class="menu">
+          <div class="title">Listings</div>
+          <%= link_to "Create Listing", new_product_path() %>
+          <%= link_to "Manage my listings", usercenter_path() %>
+          <%= link_to "My Wishlist", wishlist_path() %>
+        </div>
+        <div class="menu">
+          <div class="title">Categories</div>
+          <% @categories.each do | category | %>
+            <%= link_to category.name, category_path(category.id) %>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
