@@ -32,7 +32,7 @@ class ProductsController < ApplicationController
   def destroy
     if @product
       @product.destroy
-      redirect_to usercenter_index_path
+      redirect_to usercenter_path
     end
   end
 

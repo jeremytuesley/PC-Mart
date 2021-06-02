@@ -25,7 +25,7 @@
         <% if user_signed_in? && current_user == @product.user %>
             <%= button_to "Edit Listing", edit_product_path(@product), method: :get, class: "button red" %>
         <% elsif user_signed_in? %>
-            <%= button_to "Save to wish list", usercenter_path(), method: :get, class: "button red" %>
+            <%= button_to "Save to wish list", create_wishlist_path(@product), method: :post, class: "button red" %>
         <% end %>
     </div>
 </div>

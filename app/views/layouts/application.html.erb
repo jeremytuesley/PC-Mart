@@ -24,7 +24,7 @@
           <div><%= link_to "Create Listing", new_product_path() %></div>
           <div>
             <% if user_signed_in? %>
-              <%= link_to "My Account", usercenter_index_path() %>
+              <%= link_to "My Account", usercenter_path() %>
             <% else %>
               <%= link_to "Login", new_user_session_path() %> |
               <%= link_to "Register", new_user_registration_path() %> 
