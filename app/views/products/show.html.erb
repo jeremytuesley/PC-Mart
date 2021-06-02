@@ -1,10 +1,10 @@
 <div class="product">
     <div class="product_info">
         <h1><%= @product.name %></h1>
-        <% if @product.default_image? %>
-            <p><%= image_tag("example_products/#{@product.default_image}.jpg", width: 500) %></p>
-        <% elsif @product.picture.attached? %>
+        <% if @product.picture.attached? %>
             <p><%= cl_image_tag @product.picture.key, crop: :scale, width: 500, cloud_name: 'dkh1bbave' %></p>
+        <% elsif @product.default_image? %>
+            <p><%= image_tag("example_products/#{@product.default_image}.jpg", width: 500) %></p>
         <% end %>
         <h2>Price: $<%= @product.price %></h2>
         <h4>Category: <%= link_to @product.category.name, category_path(@product.category.id) %></h4>
@@ -18,14 +18,14 @@
             <% if user_signed_in? %>
                 <p>Email: <%= @product.user.email %></p>
                 <p>Phone: <%= @product.user.phone %></p>
-            <% else %>
-                <a href="<%= new_user_session_path() %>">
-                    <div class="button red"> Login to see contact details </div>
-                </a>
+            <% else %>  
+                <%= button_to "Login to see contact details", new_user_session_path(), method: :get, class: "button red" %>
             <% end %>
         </div>
-        <% if user_signed_in? %>
-            <a href="#"><div class="button red"> Save to wish list </div></a>
+        <% if user_signed_in? && current_user == @product.user %>
+            <%= button_to "Edit Listing", edit_product_path(@product), method: :get, class: "button red" %>
+        <% elsif user_signed_in? %>
+            <%= button_to "Save to wish list", usercenter_path(), method: :get, class: "button red" %>
         <% end %>
     </div>
 </div>

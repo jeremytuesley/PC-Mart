@@ -2,18 +2,16 @@ class ProductsController < ApplicationController
   skip_before_action :verify_authenticity_token
   before_action :authenticate_user!, only: %i[new]
   before_action :set_item, only: %i[show update edit destroy]
+  before_action :find_categories, only: %i[new create edit update]
 
-  def show
-  end
+  def show; end
 
   def new 
-    @new_product = Product.new
-    @categories = Category.order(:name)
+    @product = Product.new
   end
 
   def create
-    @new_product = Product.new
-    @categories = Category.order(:name)
+    @product = Product.new
 
     @item = Product.new(item_params)
     if @item.save
@@ -24,7 +22,11 @@ class ProductsController < ApplicationController
     end
   end
 
-  def edit
+  def edit; end
+
+  def update
+    @product.update(item_params)
+    redirect_to product_path(@product.id)
   end
 
   def destroy
@@ -40,5 +42,9 @@ class ProductsController < ApplicationController
 
   def set_item
     @product = Product.find(params[:id])
+  end
+
+  def find_categories
+    @categories = Category.order(:name)
   end
 end

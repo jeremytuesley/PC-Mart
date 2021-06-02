@@ -1,12 +1,10 @@
 <div class="market seller">
   <h1><%= @seller.name %></h1>
   <% if user_signed_in? %>
-      <p>Email: <%= @seller.email %></p>
-      <p>Phone: <%= @seller.phone %></p>
+    <p>Email: <%= @seller.email %></p>
+    <p>Phone: <%= @seller.phone %></p>
   <% else %>
-      <a href="<%= new_user_session_path() %>">
-        <div class="button red"> Login to see contact details </div>
-      </a>
+    <%= button_to "Login to see contact details", method: :get, new_user_session_path(), class: "button red" %>
   <% end %>
 
   <h2>Current Listings by <%= @seller.name %></h2>
