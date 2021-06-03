@@ -88,7 +88,7 @@ ActiveRecord::Schema.define(version: 2021_06_02_060234) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "products", "categories"
-  add_foreign_key "products", "users"
-  add_foreign_key "wishlists", "products"
-  add_foreign_key "wishlists", "users"
+  add_foreign_key "products", "users", on_delete: :cascade
+  add_foreign_key "wishlists", "products", on_delete: :cascade
+  add_foreign_key "wishlists", "users", on_delete: :cascade
 end
